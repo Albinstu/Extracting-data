@@ -1,0 +1,14 @@
+
+        pp = []
+        a = list(map(float, re.findall(r'[0-9.]*[0-9]+', next(file))[6:]))
+
+        while True:
+            b = list(map(float, re.findall(r'[0-9.]*[0-9]+', next(file))[6:]))
+
+            if b == []:  #tar bort det sista värdet då det ej passar in, är dessutom antal sekunder på ett dygn
+                break
+        
+            d = abs(a[-1] - b[-1])
+            pp.append(d)
+            a = b
+
