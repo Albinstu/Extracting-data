@@ -26,3 +26,4 @@ def extract(file_path):
             pp.append(d)
             a = b
 
+        return np.array(sorted(pp))
